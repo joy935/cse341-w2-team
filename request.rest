@@ -1,4 +1,52 @@
+## get all the temples
 GET http://localhost:8080/temples
 apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
 Content-Type: application/json
 
+## get one temple: Brisbane, Australia
+GET http://localhost:8080/temples/36
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+## create a new temple
+POST http://localhost:8080/temples
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+{
+    "temple_id": 999,
+    "name": "New Temple",
+    "description": "New Description",
+    "location": "New Location",
+    "additionalInfo": false,
+    "dedicated": "2021-01-01"
+}
+
+## update a temple: New Temple
+PUT http://localhost:8080/temples/6735f2b6c12cb0785b5de60f
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+{
+    "temple_id": 999,
+    "name": "Very New Temple",
+    "description": "Very New Description",
+    "location": "Very New Location",
+    "additionalInfo": false,
+    "dedicated": "2021-01-01"
+}
+
+## delete a temple: New Temple
+DELETE http://localhost:8080/temples/999
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+## delete all templese
+DELETE http://localhost:8080/temples
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
+
+## find all published temples
+GET http://localhost:8080/temples/published
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+Content-Type: application/json
